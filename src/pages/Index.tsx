@@ -12,7 +12,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { toast } from "@/hooks/use-toast";
-import { Loader2, Zap, FileText, Brain } from "lucide-react";
+import { Loader2, Zap, FileText, Brain, MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -71,6 +72,12 @@ const Index = () => {
               </div>
             </div>
             <div className="flex items-center space-x-2">
+              <Link to="/rag">
+                <Button variant="outline" size="sm" className="flex items-center gap-2">
+                  <MessageCircle className="h-4 w-4" />
+                  Consulta RAG
+                </Button>
+              </Link>
               <div className="flex items-center space-x-1 text-sm text-muted-foreground">
                 <Brain className="h-4 w-4" />
                 <span>Powered by Gemini AI</span>
