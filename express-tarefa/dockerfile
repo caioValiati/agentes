@@ -1,0 +1,16 @@
+FROM node:18
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+
+# COPY da pasta SQL para dentro do container
+COPY sql ./sql
+
+
+EXPOSE 5432
+
+CMD ["node", "src/server.js"]
