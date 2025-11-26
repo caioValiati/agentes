@@ -23,7 +23,7 @@ export interface Movimento {
   id?: number;
   tipo: string; // VARCHAR(10) NOT NULL
   numero_notafiscal?: string; // TEXT (opcional, pode ser null)
-  data_emissao?: Date; // DATE (opcional, pode ser null)
+  data_emissao?: string; // DATE (opcional, pode ser null)
   descricao?: string; // TEXT (opcional, pode ser null)
   valor_total: number; // NUMERIC(18,2) NOT NULL
   id_fornecedorcliente?: number; // INTEGER REFERENCES pessoas(id)

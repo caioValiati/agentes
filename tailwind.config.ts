@@ -3,7 +3,12 @@ import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -111,15 +116,25 @@ export default {
         "fade-in": "fade-in 0.5s ease-out",
         "slide-up": "slide-up 0.3s ease-out",
       },
+      sidebar: {
+        DEFAULT: "hsl(var(--sidebar-background))",
+        foreground: "hsl(var(--sidebar-foreground))",
+        primary: "hsl(var(--sidebar-primary))",
+        "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
+        accent: "hsl(var(--sidebar-accent))",
+        "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
+        border: "hsl(var(--sidebar-border))",
+        ring: "hsl(var(--sidebar-ring))",
+      },
       backgroundImage: {
         "gradient-primary": "var(--gradient-primary)",
-        "gradient-accent": "var(--gradient-accent)", 
+        "gradient-accent": "var(--gradient-accent)",
         "gradient-card": "var(--gradient-card)",
       },
       boxShadow: {
-        "soft": "var(--shadow-soft)",
-        "medium": "var(--shadow-medium)",
-        "strong": "var(--shadow-strong)",
+        soft: "var(--shadow-soft)",
+        medium: "var(--shadow-medium)",
+        strong: "var(--shadow-strong)",
       },
     },
   },

@@ -6,6 +6,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import RAGPage from "./pages/RAGPage";
+import Classificacoes from "./pages/Classificacoes";
+import Pessoas from "./pages/Pessoas";
+import Movimentos from "./pages/Movimentos";
 
 const queryClient = new QueryClient();
 
@@ -18,6 +21,9 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/rag" element={<RAGPage />} />
+          <Route path="/pessoas" element={<Pessoas />} />
+          <Route path="/classificacoes" element={<Classificacoes />} />
+          <Route path="/movimentos" element={<Movimentos />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

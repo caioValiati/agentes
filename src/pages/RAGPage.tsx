@@ -1,9 +1,15 @@
-import RAGInterface from '@/components/RAGInterface';
+import RAGInterface from "@/components/RAGInterface";
+import { Header } from "@/components/ui/header";
+import { Layout } from "@/components/ui/layout";
 
 export default function RAGPage() {
-    return (
-        <div className="w-full">
-            <RAGInterface />
-        </div>
-    );
+  return (
+    <Layout>
+      <Header
+        title="Consulta Inteligente com RAG"
+        description="Faça perguntas sobre os dados do banco e receba respostas inteligentes geradas por IA"
+      />
+      <RAGInterface />
+    </Layout>
+  );
 }
